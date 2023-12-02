@@ -2,7 +2,6 @@ import { Menu, MenuItem, MenuButton, MenuDivider } from "@szhsin/react-menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faRightFromBracket, faSun, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-
 //Styling
 import ImgAvatar from "/src/assets/img_avatar.png";
 import "@szhsin/react-menu/dist/index.css";

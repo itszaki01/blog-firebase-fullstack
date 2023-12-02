@@ -6,9 +6,8 @@ import PostActionMenu from "../PostActionMenu/PostActionMenu";
 import moment from "moment";
 import { useAuth } from "../../../hooks/auth/useAuth";
 import DefualtPostImg from "/src/assets/default_image.png";
-import { useDeletePost } from "../../../hooks/post/postMutations";
 type PostItemProps = {
-    postData: PostType;
+    postData: PostType
 };
 
 export default function PostCard({ postData }: PostItemProps) {
