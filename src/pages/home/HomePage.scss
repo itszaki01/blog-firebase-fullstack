@@ -1,0 +1,7 @@
+@use '/src/scss/_index.scss' as *;
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}

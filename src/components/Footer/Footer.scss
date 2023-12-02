@@ -1,0 +1,7 @@
+@use '/src/scss/_index.scss' as *;
+
+footer{
+    grid-area: fotr;
+    text-align: center;
+    color: $theme-text;
+}

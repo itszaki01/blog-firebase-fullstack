@@ -1,0 +1,5 @@
+@use '/src/scss/_index.scss' as *;
+
+svg{
+    stroke: $theme-secondary ;
+}

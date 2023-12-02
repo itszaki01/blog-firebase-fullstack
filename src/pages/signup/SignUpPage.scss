@@ -1,0 +1,123 @@
+@use "/src/scss/_index.scss" as *;
+@use "sass:math";
+
+.signup-page-container {
+    grid-area: main;
+    color: $theme-text;
+    fieldset {
+        background-color: $theme-text-reverse;
+
+        padding: $size-md;
+        border: 1px solid $theme-color-500;
+        border-radius: 5px;
+        margin: auto;
+        @include only-desktop-view {
+            width: percentage(math.div(6, 12));
+        }
+        legend {
+            font-size: $text-xl;
+            background-color: $theme-secondary;
+            padding: 0 15px;
+            border-radius: $size-xs;
+            color: white;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: $space-bs;
+            .input-span {
+                background-color: $theme-secondary;
+                border-radius: $size-s;
+                display: flex;
+                align-items: center;
+                position: relative;
+                input {
+                    color: black;
+                    border-top-left-radius: $size-s;
+                    border-bottom-left-radius: $size-s;
+                    border: 1px solid $theme-secondary;
+                    padding: 8px;
+                    flex-grow: 1;
+                }
+                svg {
+                    width: 40px;
+                    font-size: $text-xl;
+                    color: white;
+                }
+                .show-hide-pass-icon {
+                    background-color: transparent;
+                    svg {
+                        position: absolute;
+                        top: 13px;
+                        right: 40px;
+                        color: black;
+                        font-size: $text-lg;
+                    }
+                }
+            }
+            .erros-span {
+                color: $red-500;
+                margin: -14px 0 0 6px;
+            }
+        }
+        .input-chosefile {
+            padding: 5px;
+            border-radius: $size-s;
+            border: 1px solid $theme-secondary;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $theme-secondary;
+            gap: 5px;
+           input{
+            flex-grow: 1;
+            &::-webkit-file-upload-button{
+                background-color: $theme-primary;
+                color: white;
+                border: none;
+                outline: none;
+                padding: 8px;
+                font-weight: bold;
+                border-radius: $space-s;
+                cursor: pointer;
+            }
+           }
+           svg {
+            width: 40px;
+            margin-right: -5px;
+            font-size: $text-xl;
+            color: rgb(255, 255, 255);
+        }
+        }
+        a {
+            color: $theme-color-500;
+            &:hover {
+                color: $theme-text-secondary;
+            }
+        }
+        .hr-container {
+            position: relative;
+            margin: $space-bs;
+            hr {
+                border-top: 1px solid $theme-text;
+                &::before {
+                    position: absolute;
+                    content: "OR";
+                    padding: 0 5px;
+                    margin-top: -15px;
+                    left: 46%;
+                    background-color: $theme-secondary;
+                    font-weight: bold;
+                    color: white;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .google-login {
+            @extend %fx-c;
+            svg {
+                margin-left: 10px;
+            }
+        }
+    }
+}

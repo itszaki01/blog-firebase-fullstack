@@ -1,0 +1,5 @@
+@use './scss/_index.scss' as *;
+
+.app-container{
+    background-color: $theme-background;
+}

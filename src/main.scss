@@ -1,0 +1,52 @@
+@use "./scss/_index.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;600;700;800;900&display=swap");
+html {
+    scroll-behavior: smooth;
+}
+#root {
+    margin: auto;
+    width: 100%;
+
+}
+
+* {
+    @extend %reset;
+    padding: 0;
+    outline: none;
+    border:none;
+    font-family: "Cairo", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+//Remove arrows from number Input
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+//>
+
+
+//Fix Sweat Alert Body Padding Issue
+body {
+  padding-right: 0 !important;
+  &.swal2-shown{
+    overflow: auto !important;
+  }
+}
+
+
+:disabled{
+    cursor: not-allowed;
+    opacity: 60%;
+    box-shadow: 0px 0px 5px 1px red;
+}

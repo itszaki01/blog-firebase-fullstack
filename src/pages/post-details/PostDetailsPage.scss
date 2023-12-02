@@ -1,0 +1,47 @@
+@use "/src/scss/_index.scss" as *;
+@use "sass:math";
+.post-details-container {
+    grid: main;
+    background-color: $theme-background-secondary;
+    padding: $space-md;
+    border-top-right-radius: 40px 40px;
+    border-bottom-left-radius: 40px 40px;
+    color: $theme-text;
+    width: percentage(math.div(10, 12));
+    @include mobile-tablet-view{
+        width: auto
+    }
+    margin: 0px auto;
+
+    
+    .post-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: $size-xs;
+        div {
+            line-height: 30px;
+            p {
+                font-size: $text-bs;
+                b {
+                    background-color: $theme-secondary;
+                    border-radius: $size-s;
+                    padding: 0 15px;
+                    margin-left: 10px;
+                    color: white;
+                    border: 1px solid $theme-secondary;
+                }
+            }
+        }
+
+    }
+    .post-img {
+        max-height: 500px;
+        width: 100%;
+        border-radius: $size-md;
+    }
+    &>p{
+        text-indent: $space-xl;
+        font-size: $text-lg;
+    }
+}

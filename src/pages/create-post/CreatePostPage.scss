@@ -1,0 +1,48 @@
+@use "/src/scss/_index.scss" as *;
+
+.create-post-container {
+    grid: main;
+    .create-post-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        input,
+        textarea {
+            color: $theme-text;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: $theme-text-reverse;
+        }
+        textarea {
+            max-width: 100%;
+            min-width: 100%;
+            min-height: 200px;
+        }
+        img {
+            margin: auto;
+            border: 1px solid $theme-text;
+            border-radius: 5px;
+            @include mobile-view{
+                width: 80%;
+            }
+        }
+        .select-img-section {
+            width: 100%;
+            display: flex;
+            background-color: $theme-text-reverse;
+            border-radius: 5px;
+            align-items: center;
+            padding: 10px;
+            label{
+                color: $theme-text;
+            }
+            input {
+                background-color: transparent;
+                flex-grow: 1;
+               &::-webkit-file-upload-button{
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use "/src/scss/_index.scss" as *;
+
+.default-app-layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 60px 1fr 60px;
+    gap: $space-bs;
+    min-height: 100vh;
+    grid-template-areas:
+        "navb navb navb navb navb navb navb navb navb navb navb navb"
+        ". main main main main main main main main main main ."
+        "fotr fotr fotr fotr fotr fotr fotr fotr fotr fotr fotr fotr";
+    @include mobile-tablet-view {
+        main{
+            margin: 0px 10px;
+        }
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "navb "
+            "main"
+            "fotr";
+    }
+}

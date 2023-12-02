@@ -1,0 +1,36 @@
+@use "/src/scss/_index.scss" as *;
+
+.pofile-page-container {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: $theme-text;
+    .profile-info-card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        background-color: $theme-color-300;
+        padding: 10px;
+        width: 400px;
+        img {
+            border-radius: 50%;
+            border: 3px solid $theme-secondary;
+            width: 80%;
+        }
+        .info-section {
+            background-color: $theme-secondary;
+            border-radius: 8px;
+            margin-top: 10px;
+            padding: 5px;
+            width: 100%;
+        }
+    }
+    h1 {
+        color: $theme-primary;
+    }
+}

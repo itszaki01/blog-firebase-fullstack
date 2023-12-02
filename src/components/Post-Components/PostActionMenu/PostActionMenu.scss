@@ -1,0 +1,67 @@
+@use '/src/scss/_index.scss' as *;
+
+@use '/src/scss/_index.scss' as *;
+
+@keyframes szh-menu-show {
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes szh-menu-hide {
+    to {
+        opacity: 0;
+    }
+}
+
+.szh-menu-button{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    font-size: $text-xl;
+    color: $theme-text;
+}
+.delete-icon{
+    color: $red-500;
+}
+.szh-menu {
+    font-size: 0.925rem;
+    user-select: none;
+    box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    padding: 6px;
+    color: $dark;
+    &--state-opening {
+        animation: szh-menu-show 0.15s ease-out;
+    }  
+
+    &--state-closing {
+        animation: szh-menu-hide 0.2s ease-out forwards;
+    }
+
+    &__item {
+        border-radius: 6px;
+        padding: 0.375rem 0.625rem;
+        
+        &--hover {
+            color:white;
+            background-color: $theme-primary ;
+            cursor: pointer;
+        }
+        &--submenu {
+            position: relative;
+            &::after {
+                content: url("arrow-menu.svg");
+                position: absolute;
+                width: 7px;
+                right: 0.625rem;
+            }
+        }
+    }
+
+    &__divider {
+        height: 1px;
+        margin: 0.5rem 0;
+        background-color: $dark;
+    }
+}

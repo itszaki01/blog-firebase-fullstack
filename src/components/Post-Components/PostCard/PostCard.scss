@@ -1,0 +1,61 @@
+@use "/src/scss/_index.scss" as *;
+
+.post-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: $space-bs;
+    width: 100%;
+    background-color: $theme-background-secondary;
+    padding: $space-s;
+    box-shadow: 0px 0px 3px 1px $theme-secondary;
+    border-radius: $space-xs;
+    .post-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .info-section {
+            display: flex;
+            gap: $space-xs;
+            img {
+                border-color: $theme-secondary;
+            }
+            .info {
+                line-height: 25px;
+                color: $theme-text;
+                p {
+                    font-size: $text-sm;
+                    span {
+                        color: $theme-text-secondary;
+                    }
+                }
+            }
+        }
+        .menu-section{
+            align-self: flex-start;
+        }
+    }
+    hr {
+        border-top: 1px solid $theme-text;
+    }
+    .post-card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: $space-lg;
+        color: $theme-text;
+        p {
+            @include text-truncat(2);
+        }
+        img {
+            width: 100%;
+            border-radius: $space-xs;
+        }
+        h2 {
+            @include text-truncat(2);
+        }
+        button {
+            border: 1px solid $theme-secondary;
+        }
+    }
+}

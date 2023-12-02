@@ -1,0 +1,17 @@
+@use '/src/scss/_index.scss' as *;
+
+.no-posts-yet-contianer{
+    grid-area: main;
+    width: 100%;
+    @extend %fx-cl;
+    gap: $space-bs;
+    p{
+        font-size: $text-4xl;
+        color: $theme-secondary;
+        text-align: center;
+        font-weight: bold;
+    }
+    img{
+        width: 50%;
+    }
+}

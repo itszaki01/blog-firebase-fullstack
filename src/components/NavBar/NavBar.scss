@@ -1,0 +1,40 @@
+@use "/src/scss/_index.scss" as *;
+@use "sass:math";
+
+nav {
+    grid-area: navb;
+    background-color: $theme-primary;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 5px 3px rgba($color: #000000, $alpha: 0.3);
+    .nav-bar-container {
+        padding: 0px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        @include only-desktop-view{
+            width: percentage(math.div(10, 12));
+        }
+        margin: auto;
+        .logo-section-1 {
+            display: flex;
+            align-items: center;
+            gap: $space-md;
+            text-decoration: none;
+            color: white;
+            h2 {
+                font-size: $text-3x;
+            }
+        }
+        .profile-section-2 {
+            display: flex;
+            gap: $space-md;
+            align-items: center;
+            font-size: $text-xl;
+            p{
+                color: white;
+            }
+        }
+    }
+}
